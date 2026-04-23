@@ -77,7 +77,7 @@
       "response": []
     },
     {
-      "name": "UserProfile",
+      "name": "Profile",
       "request": {
         "auth": {
           "type": "bearer",
@@ -114,9 +114,6 @@
     },
     {
       "name": "UpdateProfile",
-      "protocolProfileBehavior": {
-        "disableBodyPruning": true
-      },
       "request": {
         "auth": {
           "type": "bearer",
@@ -128,7 +125,7 @@
             }
           ]
         },
-        "method": "GET",
+        "method": "PUT",
         "header": [
           {
             "key": "Authorization",
@@ -200,7 +197,7 @@
       "response": []
     },
     {
-      "name": "MyOrders",
+      "name": "List Orders",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
       },
@@ -228,14 +225,15 @@
           "raw": ""
         },
         "url": {
-          "raw": "http://localhost:8080/order",
+          "raw": "http://localhost:8080/order/index",
           "protocol": "http",
           "host": [
             "localhost"
           ],
           "port": "8080",
           "path": [
-            "order"
+            "order",
+            "index"
           ]
         }
       },
@@ -327,7 +325,7 @@
             }
           ]
         },
-        "method": "PUT",
+        "method": "PATCH",
         "header": [],
         "body": {
           "mode": "raw",
@@ -372,7 +370,7 @@
             }
           ]
         },
-        "method": "PUT",
+        "method": "DELETE",
         "header": [],
         "body": {
           "mode": "raw",
